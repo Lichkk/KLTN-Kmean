@@ -51,7 +51,7 @@ while running:
     screen.blit(text_plus, (860,50))
     #ve nut K -
     pygame.draw.rect(screen, BLACK, (950,50,50,50))
-    screen.blit(text_min, (960,50))
+    screen.blit(text_minus, (960,50))
     #K value
     text_k= font.render('K=' +str(K), True, BLACK)
     screen.blit(text_k, (1050,50))
@@ -90,12 +90,12 @@ while running:
             #change K button + 
             if 850<mouse_x< 900 and 50<mouse_y<100:
                  K+=1
-                print('Press K+')
+                 print('Press K +')
              #change K button - 
             if 950<mouse_x< 1000 and 50<mouse_y<100:
                  if K>0:
                     K-=1
-                print('Press -')
+                 print('Press -')
             # Run button
             if 850<mouse_x< 1000 and 150<mouse_y<200:
                 labels=[]
@@ -107,6 +107,7 @@ while running:
                     dis_min=min(distances_to_clusters)
                     label=distances_to_clusters.index(dis_min)
                     labels.append(label)
+            
                 for i in range(K):
                     sum_x=0
                     sum_y=0
